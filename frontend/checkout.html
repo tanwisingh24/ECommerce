@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout — MiniStore</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header id="site-header" class="site-header"></header>
+
+<main class="container">
+  <h1 class="page-title">Checkout</h1>
+  <div class="form-card" style="max-width:480px">
+    <div id="alert-box"></div>
+    <form id="checkout-form">
+      <label for="shipping_name">Full Name</label>
+      <input type="text" id="shipping_name" required>
+
+      <label for="shipping_address">Address</label>
+      <input type="text" id="shipping_address" required>
+
+      <label for="shipping_city">City</label>
+      <input type="text" id="shipping_city" required>
+
+      <label for="shipping_zip">ZIP / Postal Code</label>
+      <input type="text" id="shipping_zip" required>
+
+      <hr style="border:none;border-top:1px solid var(--border);margin:18px 0">
+
+      <label for="card_number">Card Number (simulated — no real payment is processed)</label>
+      <input type="text" id="card_number" placeholder="4242 4242 4242 4242" maxlength="19" required>
+
+      <div style="display:flex;gap:12px">
+        <div style="flex:1">
+          <label for="card_expiry">Expiry</label>
+          <input type="text" id="card_expiry" placeholder="MM/YY" required>
+        </div>
+        <div style="flex:1">
+          <label for="card_cvc">CVC</label>
+          <input type="text" id="card_cvc" placeholder="123" required>
+        </div>
+      </div>
+
+      <button type="submit" class="btn" style="width:100%" id="pay-btn">Place Order</button>
+    </form>
+  </div>
+</main>
+
+<footer class="site-footer">MiniStore — a demo full-stack e-commerce project</footer>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/checkout.js"></script>
+</body>
+</html>
